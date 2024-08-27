@@ -5,6 +5,11 @@ app = FastAPI()
 
 # Endpoints de la API
 # @profile
+
+@app.get("/")
+def read_root():
+    return {"message": "Hola mundo!!"}
+
 @app.get('/inversor/{texto}')
 async def inversor(texto: str):
     """
@@ -30,4 +35,4 @@ async def inversor(texto: str):
 
     texto_invertido = texto[::-1]
     return {"TextoInvertido": texto_invertido}
-#Pruebo si puedo pushear2
+#Pruebo si puedo pushear22
