@@ -8,7 +8,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hola mundo!!"}
+    return {"message": "Hola hola!!"}
 
 @app.get('/inversor/{texto}')
 async def inversor(texto: str):
